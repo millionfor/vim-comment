@@ -2,7 +2,7 @@ if exists('s:loaded') | finish | endif
 let s:loaded = 1
 
 let s:line_comments  = get(g:, 'vim_line_comments',  { 'vim': '"', 'vimrc': '"', 'js': '//', 'ts': '//', 'java': '//', 'class': '//', 'c': '//', 'h': '//' })
-let s:chunk_comments = get(g:, 'vim_chunk_comments', { 'vim': ['"', '"', '"'], 'vimrc': ['"', '"', '"'], 'sh': [':<<!', '', '!'], 'md': ['```', '', '```'] })
+let s:chunk_comments = get(g:, 'vim_chunk_comments', { 'vim': ['"', '"', '"'], 'vimrc': ['"', '"', '"'], 'sh': [':<<!', '', '!'], 'md': ['```', '', '```'], 'vue': ['<!--', '', '-->'] })
 let s:vim_comment_gap = get(g:, 'vim_comment_gap', 1)
 
 command! NToggleComment call <SID>toggleLineComment(line("."), line("."))
